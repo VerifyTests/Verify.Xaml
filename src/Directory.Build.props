@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <NoWarn>CS1591;CS0649;CS8632</NoWarn>
+    <Version>0.1.5</Version>
+    <PackageTags>SqlServer, Verify</PackageTags>
+    <Description>Extends Verify (https://github.com/SimonCropp/Verify) to allow verification of SqlServer bits.</Description>
+  </PropertyGroup>
+</Project>
