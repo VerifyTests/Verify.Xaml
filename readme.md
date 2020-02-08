@@ -5,7 +5,7 @@ Source File: /readme.source.md
 To change this file edit the source file and then run MarkdownSnippets.
 -->
 
-# <img src="/src/icon.png" height="30px"> Verify.SqlServer
+# <img src="/src/icon.png" height="30px"> Verify.Xaml
 
 [![Build status](https://ci.appveyor.com/api/projects/status/enh6mjugcbmoun0e?svg=true)](https://ci.appveyor.com/project/SimonCropp/verify-xaml)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.Xaml.svg)](https://www.nuget.org/packages/Verify.Xaml/)
@@ -17,7 +17,6 @@ Extends [Verify](https://github.com/SimonCropp/Verify) to allow verification of 
 ## Contents
 
   * [Usage](#usage)
-    * [SqlServer Schema](#sqlserver-schema)
   * [Security contact information](#security-contact-information)<!-- endtoc -->
 
 
@@ -28,7 +27,7 @@ https://nuget.org/packages/Verify.Xaml/
 
 ## Usage
 
-Enable VerifySqlServer once at assembly load time:
+Enable VerifyXaml once at assembly load time:
 
 <!-- snippet: Enable -->
 <a id='snippet-enable'/></a>
@@ -37,12 +36,6 @@ VerifyXaml.Enable();
 ```
 <sup><a href='/src/Tests/GlobalSetup.cs#L9-L11' title='File snippet `enable` was extracted from'>snippet source</a> | <a href='#snippet-enable' title='Navigate to start of snippet `enable`'>anchor</a></sup>
 <!-- endsnippet -->
-
-
-### SqlServer Schema
-
-This test:
-
 
 
 ## Security contact information
