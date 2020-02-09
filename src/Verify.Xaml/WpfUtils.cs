@@ -26,7 +26,7 @@ static class WpfUtils
             // The BitmapSource that is rendered with a Visual.
             var rtb = new RenderTargetBitmap((int) window.ActualWidth, (int) window.ActualHeight, 96, 96,
                 PixelFormats.Pbgra32);
-            rtb.Render(window);
+            rtb.Render((Visual) window.Content);
 
             // Encoding the RenderBitmapTarget as a PNG file.
             var png = new PngBitmapEncoder();
