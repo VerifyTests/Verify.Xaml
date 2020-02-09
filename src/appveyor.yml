@@ -6,6 +6,8 @@ build_script:
     dotnet build src --configuration Release
 
     dotnet test src --configuration Release --no-build --no-restore --filter Category!=Integration
+after_build:
+  - ps: Get-ChildItem .\**\*.received.* | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }
 test: off
 artifacts:
   - path: '**\*.received.*'
