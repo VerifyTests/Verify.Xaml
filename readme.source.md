@@ -1,6 +1,6 @@
 # <img src="/src/icon.png" height="30px"> Verify.Xaml
 
-[![Build status](https://ci.appveyor.com/api/projects/status/enh6mjugcbmoun0e?svg=true)](https://ci.appveyor.com/project/SimonCropp/verify-xaml)
+[![Build status](https://ci.appveyor.com/api/projects/status/o2iy3b7k9le0ntps?svg=true)](https://ci.appveyor.com/project/SimonCropp/verify-xaml)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.Xaml.svg)](https://www.nuget.org/packages/Verify.Xaml/)
 
 Extends [Verify](https://github.com/SimonCropp/Verify) to allow verification of SqlServer bits.
@@ -20,6 +20,11 @@ Enable VerifyXaml once at assembly load time:
 
 snippet: Enable
 
+
+## Notes
+
+ * [Forcing WPF to use a specific Windows theme](https://arbel.net/2006/11/03/forcing-wpf-to-use-a-specific-windows-theme/)
+ 
 
 ## Security contact information
 

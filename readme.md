@@ -7,7 +7,7 @@ To change this file edit the source file and then run MarkdownSnippets.
 
 # <img src="/src/icon.png" height="30px"> Verify.Xaml
 
-[![Build status](https://ci.appveyor.com/api/projects/status/enh6mjugcbmoun0e?svg=true)](https://ci.appveyor.com/project/SimonCropp/verify-xaml)
+[![Build status](https://ci.appveyor.com/api/projects/status/o2iy3b7k9le0ntps?svg=true)](https://ci.appveyor.com/project/SimonCropp/verify-xaml)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.Xaml.svg)](https://www.nuget.org/packages/Verify.Xaml/)
 
 Extends [Verify](https://github.com/SimonCropp/Verify) to allow verification of SqlServer bits.
@@ -17,6 +17,7 @@ Extends [Verify](https://github.com/SimonCropp/Verify) to allow verification of 
 ## Contents
 
   * [Usage](#usage)
+  * [Notes](#notes)
   * [Security contact information](#security-contact-information)<!-- endtoc -->
 
 
@@ -37,6 +38,11 @@ VerifyXaml.Enable();
 <sup><a href='/src/Tests/GlobalSetup.cs#L9-L11' title='File snippet `enable` was extracted from'>snippet source</a> | <a href='#snippet-enable' title='Navigate to start of snippet `enable`'>anchor</a></sup>
 <!-- endsnippet -->
 
+
+## Notes
+
+ * [Forcing WPF to use a specific Windows theme](https://arbel.net/2006/11/03/forcing-wpf-to-use-a-specific-windows-theme/)
+ 
 
 ## Security contact information
 
