@@ -15,6 +15,14 @@ public class TheTests :
     }
     #endregion
 
+    #region UserControl
+    [StaFact]
+    public Task UserControl()
+    {
+        return Verify(new MyUserControl());
+    }
+    #endregion
+
     public TheTests(ITestOutputHelper output) :
         base(output)
     {
