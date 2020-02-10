@@ -1,5 +1,12 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.IO;
+using System.Threading.Tasks;
+using CoenM.ImageHash;
+using CoenM.ImageHash.HashAlgorithms;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.PixelFormats;
 using Tests;
+using Verify;
 using VerifyXunit;
 using Xunit;
 using Xunit.Abstractions;
@@ -15,6 +22,7 @@ public class TheTests :
     }
     #endregion
 
+
     #region UserControl
     [StaFact]
     public Task UserControl()
@@ -26,5 +34,18 @@ public class TheTests :
     public TheTests(ITestOutputHelper output) :
         base(output)
     {
+    }
+    static TheTests()
+    {
+        SharedVerifySettings.RegisterComparer(
+            "png",
+            (stream1, stream2) =>
+        {
+            var hashAlgorithm = new AverageHash ();
+            var hash1 = hashAlgorithm.Hash(Image.Load<Rgba32>(stream1));
+            var hash2 = hashAlgorithm.Hash(Image.Load<Rgba32>(stream2));
+            var percentage = CompareHash.Similarity(hash1, hash2);
+            return percentage > 90;
+        });
     }
 }
