@@ -39,11 +39,11 @@ public class TheTests :
             "png",
             (stream1, stream2) =>
             {
-                var hashAlgorithm = new AverageHash();
+                var hashAlgorithm = new DifferenceHash();
                 var hash1 = hashAlgorithm.Hash(Image.Load<Rgba32>(stream1));
                 var hash2 = hashAlgorithm.Hash(Image.Load<Rgba32>(stream2));
                 var percentage = CompareHash.Similarity(hash1, hash2);
-                return percentage > 90;
+                return percentage > 99;
             });
     }
 }
