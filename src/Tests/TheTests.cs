@@ -45,7 +45,7 @@ public class TheTests :
                 using var image2 = Image.Load<Rgba32>(stream2);
                 var hash2 = algorithm.Hash(image2);
                 var percentage = CompareHash.Similarity(hash1, hash2);
-                return percentage > 99;
+                return percentage > 90;
             });
     }
 }
