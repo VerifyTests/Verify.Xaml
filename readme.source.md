@@ -20,6 +20,17 @@ Enable VerifyXaml once at assembly load time:
 
 snippet: Enable
 
+A visual element (Window/Page/Control etc) can then be verified as follows:
+
+snippet: Window
+
+With the state of the element being rendered as a verified file:
+
+[TheTests.WindowUsage.verified.png](/src/Tests/TheTests.WindowUsage.verified.png):
+
+<img src="/src/Tests/TheTests.WindowUsage.verified.png" width="200px">
+
+
 
 ## Notes
 
