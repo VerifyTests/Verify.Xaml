@@ -10,7 +10,7 @@ To change this file edit the source file and then run MarkdownSnippets.
 [![Build status](https://ci.appveyor.com/api/projects/status/o2iy3b7k9le0ntps?svg=true)](https://ci.appveyor.com/project/SimonCropp/verify-xaml)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.Xaml.svg)](https://www.nuget.org/packages/Verify.Xaml/)
 
-Extends [Verify](https://github.com/SimonCropp/Verify) to allow verification of SqlServer bits.
+Extends [Verify](https://github.com/SimonCropp/Verify) to allow verification of Xaml UIs.
 
 
 <!-- toc -->
@@ -51,4 +51,4 @@ To report a security vulnerability, use the [Tidelift security contact](https://
 
 ## Icon
 
-[Database](https://thenounproject.com/term/database/310841/) designed by [Creative Stall](https://thenounproject.com/creativestall/) from [The Noun Project](https://thenounproject.com/creativepriyanka).
+[Gem](https://thenounproject.com/term/gem/2247823/) designed by [Adnen Kadri](https://thenounproject.com/adnen.kadri/) from [The Noun Project](https://thenounproject.com/creativepriyanka).
