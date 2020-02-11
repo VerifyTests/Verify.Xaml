@@ -17,7 +17,7 @@ Extends [Verify](https://github.com/SimonCropp/Verify) to allow verification of 
 ## Contents
 
   * [Usage](#usage)
-  * [Notes](#notes)
+  * [OS specific rendering](#os-specific-rendering)
   * [Security contact information](#security-contact-information)<!-- endtoc -->
 
 
@@ -59,11 +59,14 @@ With the state of the element being rendered as a verified file:
 <img src="/src/Tests/TheTests.WindowUsage.verified.png" width="200px">
 
 
+## OS specific rendering
 
-## Notes
+The rendering of XAML elements can very slightly between different OS versions. This can make verification on different machines (eg CI) problematic. There are several approaches to mitigate this:
 
- * [Forcing WPF to use a specific Windows theme](https://arbel.net/2006/11/03/forcing-wpf-to-use-a-specific-windows-theme/)
- 
+
+ * [Forcing elements to use a specific theme](https://arbel.net/2006/11/03/forcing-wpf-to-use-a-specific-windows-theme/)
+ * Using a [custom comparer](https://github.com/SimonCropp/Verify/blob/master/docs/comparer.md)
+
 
 ## Security contact information
 
