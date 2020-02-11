@@ -1,8 +1,6 @@
-﻿using System.Windows.Controls;
-
-namespace Tests
+﻿namespace Tests
 {
-    public partial class MyUserControl : UserControl
+    public partial class MyUserControl
     {
         public MyUserControl()
         {
