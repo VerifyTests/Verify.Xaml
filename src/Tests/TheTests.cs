@@ -20,6 +20,14 @@ public class TheTests :
     }
     #endregion
 
+    #region Page
+    [StaFact]
+    public Task Page()
+    {
+        return Verify(new MyPage());
+    }
+    #endregion
+
     #region UserControl
     [StaFact]
     public Task UserControl()

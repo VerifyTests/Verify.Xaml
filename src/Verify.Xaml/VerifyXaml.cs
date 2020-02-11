@@ -1,5 +1,4 @@
 ﻿using System.Windows;
-using System.Windows.Controls;
 
 namespace Verify.Xaml
 {
@@ -8,12 +7,12 @@ namespace Verify.Xaml
         public static void Enable()
         {
             SharedVerifySettings.RegisterFileConverter<Window>("png", WindowToImage);
-            SharedVerifySettings.RegisterFileConverter<UserControl>("png", UserControlToImage);
+            SharedVerifySettings.RegisterFileConverter<FrameworkElement>("png", ElementToImage);
         }
 
-        static ConversionResult UserControlToImage(UserControl userControl, VerifySettings settings)
+        static ConversionResult ElementToImage(FrameworkElement element, VerifySettings settings)
         {
-            var stream = WpfUtils.ScreenCapture(userControl);
+            var stream = WpfUtils.ScreenCapture(element);
             return new ConversionResult(null, new[] {stream});
         }
 

@@ -1,17 +1,16 @@
 ﻿using System.IO;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Verify.Xaml;
 
 static class WpfUtils
 {
-    public static Stream ScreenCapture(UserControl userControl)
+    public static Stream ScreenCapture(FrameworkElement element)
     {
         var window = new HostWindow
         {
-            Content = userControl
+            Content = element
         };
         return ScreenCapture(window);
     }

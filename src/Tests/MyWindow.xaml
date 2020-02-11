@@ -5,8 +5,98 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tests"
         mc:Ignorable="d"
-        Title="MyWindow" Height="450" Width="800">
-    <Grid>
-        <Button>Button</Button>
-    </Grid>
+        Height="350"
+        Width="525"
+        Title="MyWindow">
+ <DockPanel Name="MyPanel">
+        <Menu DockPanel.Dock="Top" Height="26">
+            <MenuItem Header="File">
+                <MenuItem  Header="Exit" />
+            </MenuItem>
+            <MenuItem Header="View">
+                <MenuItem Name="StandardMenu"  IsCheckable="true" IsChecked="True"
+                          Header="Standard" />
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="About" />
+            </MenuItem>
+        </Menu>
+        <Grid Name="MyGrid" ShowGridLines="False">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Button Name="B7" Grid.Column="4" Grid.Row="2">7</Button>
+            <Button Name="B8" Grid.Column="5" Grid.Row="2">8</Button>
+            <Button Name="B9" Grid.Column="6" Grid.Row="2">9</Button>
+            <Button Name="B4" Grid.Column="4" Grid.Row="3">4</Button>
+            <Button Name="B5" Grid.Column="5" Grid.Row="3">5</Button>
+            <Button Name="B6" Grid.Column="6" Grid.Row="3">6</Button>
+            <Button Name="B1" Grid.Column="4" Grid.Row="4">1</Button>
+            <Button Name="B2" Grid.Column="5" Grid.Row="4">2</Button>
+            <Button Name="B3" Grid.Column="6" Grid.Row="4">3</Button>
+            <Button Name="B0" Grid.Column="4" Grid.Row="5">0</Button>
+            <Button Name="BPeriod"  Grid.Column="5" Grid.Row="5">.</Button>
+            <Button Name="BPM" Background="Darkgray" Grid.Column="6" Grid.Row="5">+/-</Button>
+            <Button Name="BDevide" Background="Darkgray" Grid.Column="7" Grid.Row="2">/</Button>
+            <Button Name="BMultiply" Background="Darkgray" Grid.Column="7" Grid.Row="3">*</Button>
+            <Button Name="BMinus" Background="Darkgray" Grid.Column="7" Grid.Row="4">-</Button>
+            <Button Name="BPlus" Background="Darkgray" Grid.Column="7" Grid.Row="5">+</Button>
+            <Button Name="BSqrt" Background="Darkgray" Grid.Column="8" Grid.Row="2"
+                    ToolTip="Usage: 'A Sqrt'">
+                Sqrt
+            </Button>
+            <Button Name="BPercent" Background="Darkgray" Grid.Column="8" Grid.Row="3"
+                    ToolTip="Usage: 'A % B ='">
+                %
+            </Button>
+            <Button Name="BOneOver" Background="Darkgray" Grid.Column="8" Grid.Row="4"
+                    ToolTip="Usage: 'A 1/X'">
+                1/X
+            </Button>
+            <Button Name="BEqual" Background="Darkgray" Grid.Column="8" Grid.Row="5">=</Button>
+            <Button Name="BC" Background="Darkgray" Grid.Column="8" Grid.Row="1"
+                     ToolTip="Clear All">
+                C
+            </Button>
+            <Button Name="BCE" Background="Darkgray" Grid.Column="7" Grid.Row="1"
+                    ToolTip="Clear Current Entry">
+                CE
+            </Button>
+            <Button Name="BMemClear" Background="Darkgray" Grid.Column="3" Grid.Row="2"
+                    ToolTip="Clear Memory">
+                MC
+            </Button>
+            <Button Name="BMemRecall" Background="Darkgray" Grid.Column="3" Grid.Row="3"
+                    ToolTip="Recall Memory">
+                MR
+            </Button>
+            <Button Name="BMemSave" Background="Darkgray" Grid.Column="3" Grid.Row="4"
+                    ToolTip="Store in Memory">
+                MS
+            </Button>
+            <Button Name="BMemPlus" Background="Darkgray" Grid.Column="3" Grid.Row="5"
+                    ToolTip="Add To Memory">
+                M+
+            </Button>
+            <TextBlock Name="BMemBox" Grid.Column="3" Grid.Row="1" Margin="10,17,10,17" Grid.ColumnSpan="2">Memory: [empty]</TextBlock>
+            <TextBox Grid.ColumnSpan="9" x:Name="DisplayBox" Height="30" Margin="5" />
+            <TextBox Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="5" Margin="5" x:Name="PaperBox" />
+        </Grid>
+    </DockPanel>
 </Window>
