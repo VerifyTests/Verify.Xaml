@@ -1,10 +1,7 @@
 ﻿using System.Drawing;
 using System.Threading.Tasks;
-using CoenM.ImageHash;
-using CoenM.ImageHash.HashAlgorithms;
 using Shipwreck.Phash;
 using Shipwreck.Phash.Bitmaps;
-using SixLabors.ImageSharp.PixelFormats;
 using Tests;
 using Verify;
 using VerifyXunit;
