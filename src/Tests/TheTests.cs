@@ -13,25 +13,28 @@ public class TheTests :
 {
     #region Window
     [StaFact]
-    public Task WindowUsage()
+    public async Task WindowUsage()
     {
-        return Verify(new MyWindow());
+        await Verify(new MyWindow())
+            .ConfigureAwait(true);
     }
     #endregion
 
     #region Page
     [StaFact]
-    public Task Page()
+    public async Task Page()
     {
-        return Verify(new MyPage());
+        await Verify(new MyPage())
+            .ConfigureAwait(true);
     }
     #endregion
 
     #region UserControl
     [StaFact]
-    public Task UserControl()
+    public async Task UserControl()
     {
-        return Verify(new MyUserControl());
+        await Verify(new MyUserControl())
+            .ConfigureAwait(true);
     }
     #endregion
 
