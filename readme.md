@@ -51,7 +51,7 @@ public async Task WindowUsage()
         .ConfigureAwait(true);
 }
 ```
-<sup><a href='/src/Tests/TheTests.cs#L14-L21' title='File snippet `window` was extracted from'>snippet source</a> | <a href='#snippet-window' title='Navigate to start of snippet `window`'>anchor</a></sup>
+<sup><a href='/src/Tests/TheTests.cs#L10-L17' title='File snippet `window` was extracted from'>snippet source</a> | <a href='#snippet-window' title='Navigate to start of snippet `window`'>anchor</a></sup>
 <!-- endsnippet -->
 
 With the state of the element being rendered as a verified file:
