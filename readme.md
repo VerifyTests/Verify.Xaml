@@ -7,10 +7,10 @@ To change this file edit the source file and then run MarkdownSnippets.
 
 # <img src="/src/icon.png" height="30px"> Verify.Xaml
 
-[![Build status](https://ci.appveyor.com/api/projects/status/o2iy3b7k9le0ntps?svg=true)](https://ci.appveyor.com/project/SimonCropp/verify-xaml)
+[![Build status](https://ci.appveyor.com/api/projects/status/o2iy3b7k9le0ntps?svg=true)](https://ci.appveyor.com/project/VerifyTests/verify-xaml)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.Xaml.svg)](https://www.nuget.org/packages/Verify.Xaml/)
 
-Extends [Verify](https://github.com/SimonCropp/Verify) to allow verification of Xaml UIs.
+Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of Xaml UIs.
 
 Support is available via a [Tidelift Subscription](https://tidelift.com/subscription/pkg/nuget-verify.xaml?utm_source=nuget-verify.xaml&utm_medium=referral&utm_campaign=enterprise).
 
@@ -67,7 +67,7 @@ The rendering of XAML elements can very slightly between different OS versions. 
 
 
  * [Forcing elements to use a specific theme](https://arbel.net/2006/11/03/forcing-wpf-to-use-a-specific-windows-theme/)
- * Using a [custom comparer](https://github.com/SimonCropp/Verify/blob/master/docs/comparer.md)
+ * Using a [custom comparer](https://github.com/VerifyTests/Verify/blob/master/docs/comparer.md)
 
 
 ## Security contact information
