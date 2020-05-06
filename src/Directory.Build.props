@@ -6,6 +6,6 @@
     <Version>1.1.0</Version>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <PackageTags>Xaml, Wpf, Verify</PackageTags>
-    <Description>Extends Verify (https://github.com/SimonCropp/Verify) to allow verification of Xaml and Wpf bits.</Description>
+    <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow verification of Xaml and Wpf bits.</Description>
   </PropertyGroup>
 </Project>
