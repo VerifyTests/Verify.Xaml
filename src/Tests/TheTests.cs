@@ -1,46 +1,46 @@
-﻿using System.Threading.Tasks;
+﻿using System.Threading;
+using System.Threading.Tasks;
 using Tests;
-using VerifyXunit;
-using Xunit;
-using Xunit.Abstractions;
+using VerifyNUnit;
+using NUnit.Framework;
+using Verify.Xaml;
 
-public class TheTests :
-    VerifyBase
+[Apartment(ApartmentState.STA)]
+[TestFixture]
+public class TheTests
 {
     #region Window
-    [StaFact]
+    [Test]
     public async Task WindowUsage()
     {
-        await Verify(new MyWindow())
+        await Verifier.Verify(new MyWindow())
             .ConfigureAwait(true);
     }
     #endregion
 
     #region Page
-    [StaFact]
+    [Test]
     public async Task Page()
     {
-        await Verify(new MyPage())
+        await Verifier.Verify(new MyPage())
             .ConfigureAwait(true);
     }
     #endregion
 
     #region UserControl
-    [StaFact]
+    [Test]
     public async Task UserControl()
     {
-        await Verify(new MyUserControl())
+        await Verifier.Verify(new MyUserControl())
             .ConfigureAwait(true);
     }
     #endregion
 
-    public TheTests(ITestOutputHelper output) :
-        base(output)
-    {
-    }
-
     static TheTests()
     {
+        #region Enable
+        VerifyXaml.Enable();
+        #endregion
         VerifyPhash.Initialize();
     }
 }

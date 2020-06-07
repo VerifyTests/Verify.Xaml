@@ -36,7 +36,7 @@ Enable VerifyXaml once at assembly load time:
 ```cs
 VerifyXaml.Enable();
 ```
-<sup><a href='/src/Tests/GlobalSetup.cs#L9-L11' title='File snippet `enable` was extracted from'>snippet source</a> | <a href='#snippet-enable' title='Navigate to start of snippet `enable`'>anchor</a></sup>
+<sup><a href='/src/Tests/TheTests.cs#L41-L43' title='File snippet `enable` was extracted from'>snippet source</a> | <a href='#snippet-enable' title='Navigate to start of snippet `enable`'>anchor</a></sup>
 <!-- endsnippet -->
 
 A visual element (Window/Page/Control etc) can then be verified as follows:
@@ -44,14 +44,14 @@ A visual element (Window/Page/Control etc) can then be verified as follows:
 <!-- snippet: Window -->
 <a id='snippet-window'/></a>
 ```cs
-[StaFact]
+[Test]
 public async Task WindowUsage()
 {
-    await Verify(new MyWindow())
+    await Verifier.Verify(new MyWindow())
         .ConfigureAwait(true);
 }
 ```
-<sup><a href='/src/Tests/TheTests.cs#L10-L17' title='File snippet `window` was extracted from'>snippet source</a> | <a href='#snippet-window' title='Navigate to start of snippet `window`'>anchor</a></sup>
+<sup><a href='/src/Tests/TheTests.cs#L12-L19' title='File snippet `window` was extracted from'>snippet source</a> | <a href='#snippet-window' title='Navigate to start of snippet `window`'>anchor</a></sup>
 <!-- endsnippet -->
 
 With the state of the element being rendered as a verified file:
