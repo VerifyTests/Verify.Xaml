@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using VerifyTests;
 
 namespace Verify.Xaml
 {
@@ -6,8 +7,8 @@ namespace Verify.Xaml
     {
         public static void Enable()
         {
-            SharedVerifySettings.RegisterFileConverter<Window>("png", WindowToImage);
-            SharedVerifySettings.RegisterFileConverter<FrameworkElement>("png", ElementToImage);
+            VerifierSettings.RegisterFileConverter<Window>("png", WindowToImage);
+            VerifierSettings.RegisterFileConverter<FrameworkElement>("png", ElementToImage);
         }
 
         static ConversionResult ElementToImage(FrameworkElement element, VerifySettings settings)
