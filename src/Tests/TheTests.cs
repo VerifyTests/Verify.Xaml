@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Tests;
 using VerifyNUnit;
 using NUnit.Framework;
-using Verify.Xaml;
+using VerifyTests;
 
 [Apartment(ApartmentState.STA)]
 [TestFixture]
