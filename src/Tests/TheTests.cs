@@ -42,5 +42,6 @@ public class TheTests
         VerifyXaml.Enable();
         #endregion
         VerifyPhash.Initialize();
+        VerifyPhash.RegisterComparer("png", threshold: 0.9999F);
     }
 }
