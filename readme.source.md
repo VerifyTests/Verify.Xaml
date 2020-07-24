@@ -5,7 +5,7 @@
 
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of Xaml UIs.
 
-Support is available via a [Tidelift Subscription](https://tidelift.com/subscription/pkg/nuget-verify.xaml?utm_source=nuget-verify.xaml&utm_medium=referral&utm_campaign=enterprise).
+Support is available via a [Tidelift Subscription](https://tidelift.com/subscription/pkg/nuget-verify?utm_source=nuget-verify&utm_medium=referral&utm_campaign=enterprise).
 
 toc
 
