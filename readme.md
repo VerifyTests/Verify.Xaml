@@ -35,7 +35,7 @@ https://nuget.org/packages/Verify.Xaml/
 Enable VerifyXaml once at assembly load time:
 
 <!-- snippet: Enable -->
-<a id='snippet-enable'/></a>
+<a id='snippet-enable'></a>
 ```cs
 VerifyXaml.Enable();
 ```
@@ -45,7 +45,7 @@ VerifyXaml.Enable();
 A visual element (Window/Page/Control etc) can then be verified as follows:
 
 <!-- snippet: Window -->
-<a id='snippet-window'/></a>
+<a id='snippet-window'></a>
 ```cs
 [Test]
 public async Task WindowUsage()
