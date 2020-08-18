@@ -22,7 +22,7 @@ Part of the <a href='https://dotnetfoundation.org' alt=''>.NET Foundation</a>
 
   * [Usage](#usage)
   * [OS specific rendering](#os-specific-rendering)
-  * [Security contact information](#security-contact-information)<!-- endtoc -->
+  * [Security contact information](#security-contact-information)<!-- endToc -->
 
 
 ## NuGet package
@@ -40,7 +40,7 @@ Enable VerifyXaml once at assembly load time:
 VerifyXaml.Enable();
 ```
 <sup><a href='/src/Tests/TheTests.cs#L41-L43' title='File snippet `enable` was extracted from'>snippet source</a> | <a href='#snippet-enable' title='Navigate to start of snippet `enable`'>anchor</a></sup>
-<!-- endsnippet -->
+<!-- endSnippet -->
 
 A visual element (Window/Page/Control etc) can then be verified as follows:
 
@@ -55,7 +55,7 @@ public async Task WindowUsage()
 }
 ```
 <sup><a href='/src/Tests/TheTests.cs#L12-L19' title='File snippet `window` was extracted from'>snippet source</a> | <a href='#snippet-window' title='Navigate to start of snippet `window`'>anchor</a></sup>
-<!-- endsnippet -->
+<!-- endSnippet -->
 
 With the state of the element being rendered as a verified file:
 
