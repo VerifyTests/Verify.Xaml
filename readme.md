@@ -39,7 +39,7 @@ Enable VerifyXaml once at assembly load time:
 ```cs
 VerifyXaml.Enable();
 ```
-<sup><a href='/src/Tests/TheTests.cs#L41-L43' title='File snippet `enable` was extracted from'>snippet source</a> | <a href='#snippet-enable' title='Navigate to start of snippet `enable`'>anchor</a></sup>
+<sup><a href='/src/Tests/TheTests.cs#L41-L43' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 A visual element (Window/Page/Control etc) can then be verified as follows:
@@ -54,7 +54,7 @@ public async Task WindowUsage()
         .ConfigureAwait(true);
 }
 ```
-<sup><a href='/src/Tests/TheTests.cs#L12-L19' title='File snippet `window` was extracted from'>snippet source</a> | <a href='#snippet-window' title='Navigate to start of snippet `window`'>anchor</a></sup>
+<sup><a href='/src/Tests/TheTests.cs#L12-L19' title='Snippet source file'>snippet source</a> | <a href='#snippet-window' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 With the state of the element being rendered as a verified file:
