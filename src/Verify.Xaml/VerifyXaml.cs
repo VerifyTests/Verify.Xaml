@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
 
 namespace VerifyTests
 {
@@ -10,13 +11,13 @@ namespace VerifyTests
             VerifierSettings.RegisterFileConverter<FrameworkElement>(ElementToImage);
         }
 
-        static ConversionResult ElementToImage(FrameworkElement element, VerifySettings settings)
+        static ConversionResult ElementToImage(FrameworkElement element, IReadOnlyDictionary<string, object> context)
         {
             var stream = WpfUtils.ScreenCapture(element);
             return new ConversionResult(null, "png", stream);
         }
 
-        static ConversionResult WindowToImage(Window window, VerifySettings settings)
+        static ConversionResult WindowToImage(Window window, IReadOnlyDictionary<string, object> context)
         {
             var stream = WpfUtils.ScreenCapture(window);
             return new ConversionResult(null, "png", stream);
