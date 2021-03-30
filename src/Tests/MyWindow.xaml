@@ -41,7 +41,7 @@
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <Button Name="B7" Grid.Column="4" Grid.Row="2">9999</Button>
+            <Button Name="B7" Grid.Column="4" Grid.Row="2">7</Button>
             <Button Name="B8" Grid.Column="5" Grid.Row="2">8</Button>
             <Button Name="B9" Grid.Column="6" Grid.Row="2">9</Button>
             <Button Name="B4" Grid.Column="4" Grid.Row="3">4</Button>

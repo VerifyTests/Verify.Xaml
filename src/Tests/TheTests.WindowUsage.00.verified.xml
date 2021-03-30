@@ -31,7 +31,7 @@
         <av:RowDefinition />
         <av:RowDefinition />
       </av:Grid.RowDefinitions>
-      <av:Button Name="B7" av:Grid.Column="4" av:Grid.Row="2">9999</av:Button>
+      <av:Button Name="B7" av:Grid.Column="4" av:Grid.Row="2">7</av:Button>
       <av:Button Name="B8" av:Grid.Column="5" av:Grid.Row="2">8</av:Button>
       <av:Button Name="B9" av:Grid.Column="6" av:Grid.Row="2">9</av:Button>
       <av:Button Name="B4" av:Grid.Column="4" av:Grid.Row="3">4</av:Button>
