@@ -43,14 +43,16 @@ A visual element (Window/Page/Control etc) can then be verified as follows:
 [Test]
 public async Task WindowUsage()
 {
-    await Verifier.Verify(new MyWindow())
-        .ConfigureAwait(true);
+    var window = new MyWindow();
+    await Verifier.Verify(window);
 }
 ```
 <sup><a href='/src/Tests/TheTests.cs#L12-L19' title='Snippet source file'>snippet source</a> | <a href='#snippet-window' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
-With the state of the element being rendered as a verified file:
+With the state of the element being rendered as a verified files:
+
+[TheTests.WindowUsage.verified.xml](/src/Tests/TheTests.WindowUsage.verified.xml):
 
 [TheTests.WindowUsage.verified.png](/src/Tests/TheTests.WindowUsage.verified.png):
 
@@ -60,7 +62,6 @@ With the state of the element being rendered as a verified file:
 ## OS specific rendering
 
 The rendering of XAML elements can very slightly between different OS versions. This can make verification on different machines (eg CI) problematic. There are several approaches to mitigate this:
-
 
  * [Forcing elements to use a specific theme](https://arbel.net/2006/11/03/forcing-wpf-to-use-a-specific-windows-theme/)
  * Using a [custom comparer](https://github.com/VerifyTests/Verify/blob/master/docs/comparer.md)

@@ -13,14 +13,24 @@ namespace VerifyTests
 
         static ConversionResult ElementToImage(FrameworkElement element, IReadOnlyDictionary<string, object> context)
         {
-            var stream = WpfUtils.ScreenCapture(element);
-            return new ConversionResult(null, "png", stream);
+            var pngStream = WpfUtils.ScreenCapture(element);
+            return new ConversionResult(null,
+                new List<Target>
+                {
+                    new("xml", element.ToXamlString()),
+                    new("png", pngStream)
+                });
         }
 
         static ConversionResult WindowToImage(Window window, IReadOnlyDictionary<string, object> context)
         {
-            var stream = WpfUtils.ScreenCapture(window);
-            return new ConversionResult(null, "png", stream);
+            var pngStream = WpfUtils.ScreenCapture(window);
+            return new ConversionResult(null,
+                new List<Target>
+                {
+                    new("xml", window.ToXamlString()),
+                    new("png", pngStream)
+                });
         }
     }
 }
