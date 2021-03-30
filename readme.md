@@ -52,11 +52,11 @@ public async Task WindowUsage()
 
 With the state of the element being rendered as a verified files:
 
-[TheTests.WindowUsage.verified.xml](/src/Tests/TheTests.WindowUsage.verified.xml):
+[TheTests.WindowUsage.00.verified.xml](/src/Tests/TheTests.WindowUsage.00.verified.xml):
 
-[TheTests.WindowUsage.verified.png](/src/Tests/TheTests.WindowUsage.verified.png):
+[TheTests.WindowUsage.01.verified.png](/src/Tests/TheTests.WindowUsage.01.verified.png):
 
-<img src="/src/Tests/TheTests.WindowUsage.verified.png" width="200px">
+<img src="/src/Tests/TheTests.WindowUsage.001.verified.png" width="200px">
 
 
 ## OS specific rendering
