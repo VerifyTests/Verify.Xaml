@@ -13,7 +13,8 @@ public class TheTests
     [Test]
     public async Task WindowUsage()
     {
-        await Verifier.Verify(new MyWindow())
+        var window = new MyWindow();
+        await Verifier.Verify(window)
             .ConfigureAwait(true);
     }
     #endregion
@@ -22,7 +23,8 @@ public class TheTests
     [Test]
     public async Task Page()
     {
-        await Verifier.Verify(new MyPage())
+        var page = new MyPage();
+        await Verifier.Verify(page)
             .ConfigureAwait(true);
     }
     #endregion
@@ -31,7 +33,8 @@ public class TheTests
     [Test]
     public async Task UserControl()
     {
-        await Verifier.Verify(new MyUserControl())
+        var userControl = new MyUserControl();
+        await Verifier.Verify(userControl)
             .ConfigureAwait(true);
     }
     #endregion
