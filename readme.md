@@ -56,7 +56,7 @@ With the state of the element being rendered as a verified files:
 
 [TheTests.WindowUsage.01.verified.png](/src/Tests/TheTests.WindowUsage.01.verified.png):
 
-<img src="/src/Tests/TheTests.WindowUsage.001.verified.png" width="200px">
+<img src="/src/Tests/TheTests.WindowUsage.01.verified.png" width="200px">
 
 
 ## OS specific rendering
