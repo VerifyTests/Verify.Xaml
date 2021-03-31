@@ -10,36 +10,44 @@ using VerifyTests;
 public class TheTests
 {
     #region Window
+
     [Test]
     public async Task WindowUsage()
     {
-        var window = new MyWindow();
+        MyWindow window = new();
         await Verifier.Verify(window);
     }
+
     #endregion
 
     #region Page
+
     [Test]
     public async Task Page()
     {
-        var page = new MyPage();
+        MyPage page = new();
         await Verifier.Verify(page);
     }
+
     #endregion
 
     #region UserControl
+
     [Test]
     public async Task UserControl()
     {
-        var userControl = new MyUserControl();
+        MyUserControl userControl = new();
         await Verifier.Verify(userControl);
     }
+
     #endregion
 
     static TheTests()
     {
         #region Enable
+
         VerifyXaml.Enable();
+
         #endregion
 
         VerifyPhash.Initialize();

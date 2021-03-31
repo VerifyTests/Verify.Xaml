@@ -14,7 +14,7 @@ namespace VerifyTests
         static ConversionResult ElementToImage(FrameworkElement element, IReadOnlyDictionary<string, object> context)
         {
             var pngStream = WpfUtils.ScreenCapture(element);
-            return new ConversionResult(null,
+            return new(null,
                 new List<Target>
                 {
                     new("xml", element.ToXamlString()),
@@ -25,7 +25,7 @@ namespace VerifyTests
         static ConversionResult WindowToImage(Window window, IReadOnlyDictionary<string, object> context)
         {
             var pngStream = WpfUtils.ScreenCapture(window);
-            return new ConversionResult(null,
+            return new(null,
                 new List<Target>
                 {
                     new("xml", window.ToXamlString()),

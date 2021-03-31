@@ -9,22 +9,22 @@ using Verify.Xaml;
 
 static class WpfUtils
 {
-    public static string ToXamlString(this FrameworkElement element)
+    public static StringBuilder ToXamlString(this FrameworkElement element)
     {
-        var builder = new StringBuilder();
-        using var stringWriter = new StringWriter(builder);
-        using var xmlWriter = new XmlTextWriter(stringWriter)
+        StringBuilder builder = new();
+        using StringWriter stringWriter = new(builder);
+        using XmlTextWriter xmlWriter = new(stringWriter)
         {
             Formatting = Formatting.Indented
         };
         XamlWriter.Save(element, xmlWriter);
 
-        return builder.ToString();
+        return builder;
     }
 
     public static Stream ScreenCapture(FrameworkElement element)
     {
-        var window = new HostWindow
+        HostWindow window = new()
         {
             Content = element
         };
@@ -42,14 +42,18 @@ static class WpfUtils
             window.Height = height;
             window.Width = width;
             // The BitmapSource that is rendered with a Visual.
-            var rtb = new RenderTargetBitmap((int) window.ActualWidth, (int) window.ActualHeight, 96, 96,
+            RenderTargetBitmap renderTargetBitmap = new(
+                (int) window.ActualWidth,
+                (int) window.ActualHeight,
+                96,
+                96,
                 PixelFormats.Pbgra32);
-            rtb.Render((Visual) window.Content);
+            renderTargetBitmap.Render((Visual) window.Content);
 
             // Encoding the RenderBitmapTarget as a PNG file.
-            var png = new PngBitmapEncoder();
-            png.Frames.Add(BitmapFrame.Create(rtb));
-            var stream = new MemoryStream();
+            PngBitmapEncoder png = new();
+            png.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
+            MemoryStream stream = new();
             png.Save(stream);
             return stream;
         }
