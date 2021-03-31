@@ -43,7 +43,7 @@ A visual element (Window/Page/Control etc) can then be verified as follows:
 [Test]
 public async Task WindowUsage()
 {
-    var window = new MyWindow();
+    MyWindow window = new();
     await Verifier.Verify(window);
 }
 ```
