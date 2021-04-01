@@ -2,7 +2,7 @@
 <Project>
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <NoWarn>CS1591;CS0649;CS8632</NoWarn>
+    <NoWarn>CS1591;CS0649;CS8632;CA1416</NoWarn>
     <Version>2.5.1</Version>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <PackageTags>Xaml, Wpf, Verify</PackageTags>
