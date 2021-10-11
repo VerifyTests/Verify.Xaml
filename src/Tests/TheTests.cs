@@ -1,6 +1,4 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using Tests;
+﻿using Tests;
 using VerifyNUnit;
 using NUnit.Framework;
 using VerifyTests;
@@ -14,7 +12,7 @@ public class TheTests
     [Test]
     public async Task WindowUsage()
     {
-        MyWindow window = new();
+        var window = new MyWindow();
         await Verifier.Verify(window);
     }
 
@@ -25,7 +23,7 @@ public class TheTests
     [Test]
     public async Task Page()
     {
-        MyPage page = new();
+        var page = new MyPage();
         await Verifier.Verify(page);
     }
 
@@ -36,7 +34,7 @@ public class TheTests
     [Test]
     public async Task UserControl()
     {
-        MyUserControl userControl = new();
+        var userControl = new MyUserControl();
         await Verifier.Verify(userControl);
     }
 

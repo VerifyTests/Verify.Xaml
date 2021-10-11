@@ -1,7 +1,4 @@
-﻿using System.IO;
-using System.Linq;
-using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -13,9 +10,9 @@ static class WpfUtils
 {
     public static string ToXamlString(this FrameworkElement element)
     {
-        StringBuilder builder = new();
-        using StringWriter stringWriter = new(builder);
-        using XmlTextWriter xmlWriter = new(stringWriter)
+        var builder = new StringBuilder();
+        using var stringWriter = new StringWriter(builder);
+        using var xmlWriter = new XmlTextWriter(stringWriter)
         {
             Formatting = Formatting.Indented
         };
@@ -25,11 +22,12 @@ static class WpfUtils
         foreach (var attribute in root.Attributes().ToList())
         {
             var name = attribute.Name.ToString();
-            if (name == "AllowsTransparency" ||
-                name == "ShowInTaskbar" ||
-                name == "WindowStyle" ||
-                name == "Opacity" ||
-                name == "Visibility")
+            if (name is
+                "AllowsTransparency" or
+                "ShowInTaskbar" or 
+                "WindowStyle" or 
+                "Opacity" or 
+                "Visibility")
             {
                 attribute.Remove();
             }
@@ -39,7 +37,7 @@ static class WpfUtils
 
     public static Stream ScreenCapture(FrameworkElement element)
     {
-        HostWindow window = new()
+        var window = new HostWindow
         {
             Content = element
         };
@@ -60,7 +58,7 @@ static class WpfUtils
             window.Height = height;
             window.Width = width;
             // The BitmapSource that is rendered with a Visual.
-            RenderTargetBitmap renderTargetBitmap = new(
+            var renderTargetBitmap = new RenderTargetBitmap(
                 (int) window.ActualWidth,
                 (int) window.ActualHeight,
                 96,
