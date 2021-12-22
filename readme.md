@@ -35,7 +35,7 @@ A visual element (Window/Page/Control etc) can then be verified as follows:
 public async Task WindowUsage()
 {
     var window = new MyWindow();
-    await Verifier.Verify(window);
+    await Verify(window);
 }
 ```
 <sup><a href='/src/Tests/TheTests.cs#L10-L19' title='Snippet source file'>snippet source</a> | <a href='#snippet-window' title='Start of snippet'>anchor</a></sup>
