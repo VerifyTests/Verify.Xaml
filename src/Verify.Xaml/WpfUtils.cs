@@ -4,7 +4,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Xml;
 using System.Xml.Linq;
-using Verify.Xaml;
+using VerifyTests.Xaml;
 
 static class WpfUtils
 {

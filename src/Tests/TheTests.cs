@@ -1,7 +1,4 @@
 ﻿using Tests;
-using VerifyNUnit;
-using NUnit.Framework;
-using VerifyTests;
 
 [Apartment(ApartmentState.STA)]
 [TestFixture]
