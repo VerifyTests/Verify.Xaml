@@ -24,9 +24,9 @@ static class WpfUtils
             var name = attribute.Name.ToString();
             if (name is
                 "AllowsTransparency" or
-                "ShowInTaskbar" or 
-                "WindowStyle" or 
-                "Opacity" or 
+                "ShowInTaskbar" or
+                "WindowStyle" or
+                "Opacity" or
                 "Visibility")
             {
                 attribute.Remove();
