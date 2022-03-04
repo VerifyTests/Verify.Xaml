@@ -1,10 +1,9 @@
-﻿namespace Tests
+﻿namespace Tests;
+
+public partial class MyUserControl
 {
-    public partial class MyUserControl
+    public MyUserControl()
     {
-        public MyUserControl()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

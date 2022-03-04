@@ -1,10 +1,9 @@
-﻿namespace Tests
+﻿namespace Tests;
+
+public partial class MyWindow
 {
-    public partial class MyWindow
+    public MyWindow()
     {
-        public MyWindow()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

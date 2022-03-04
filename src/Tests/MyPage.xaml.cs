@@ -1,12 +1,11 @@
 ﻿using System.Windows.Controls;
 
-namespace Tests
+namespace Tests;
+
+public partial class MyPage : Page
 {
-    public partial class MyPage : Page
+    public MyPage()
     {
-        public MyPage()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

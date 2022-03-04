@@ -32,6 +32,7 @@ static class WpfUtils
                 attribute.Remove();
             }
         }
+
         return document.ToString();
     }
 
