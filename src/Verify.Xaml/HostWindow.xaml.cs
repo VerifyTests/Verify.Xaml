@@ -1,14 +1,7 @@
-﻿using System.Windows;
+﻿namespace VerifyTests.Xaml;
 
-namespace VerifyTests.Xaml;
-
-/// <summary>
-/// Interaction logic for HostWindow.xaml
-/// </summary>
-public partial class HostWindow : Window
+public partial class HostWindow
 {
-    public HostWindow()
-    {
+    public HostWindow() =>
         InitializeComponent();
-    }
 }

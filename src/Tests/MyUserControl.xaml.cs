@@ -2,8 +2,6 @@
 
 public partial class MyUserControl
 {
-    public MyUserControl()
-    {
+    public MyUserControl() =>
         InitializeComponent();
-    }
 }

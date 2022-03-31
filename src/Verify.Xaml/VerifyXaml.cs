@@ -16,8 +16,8 @@ public static class VerifyXaml
         return new(null,
             new List<Target>
             {
-                new("xml", element.ToXamlString()),
-                new("png", pngStream)
+                new("xml", element.ToXamlString(), null),
+                new("png", pngStream, null)
             });
     }
 
@@ -27,8 +27,8 @@ public static class VerifyXaml
         return new(null,
             new List<Target>
             {
-                new("xml", window.ToXamlString()),
-                new("png", pngStream)
+                new("xml", window.ToXamlString(), null),
+                new("png", pngStream, null)
             });
     }
 }

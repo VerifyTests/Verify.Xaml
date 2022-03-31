@@ -2,8 +2,6 @@
 
 public partial class MyWindow
 {
-    public MyWindow()
-    {
+    public MyWindow() =>
         InitializeComponent();
-    }
 }
