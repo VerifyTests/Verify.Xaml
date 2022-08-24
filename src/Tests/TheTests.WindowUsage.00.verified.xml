@@ -1,4 +1,4 @@
-<MyWindow Title="MyWindow" Width="525" Height="350" xmlns="clr-namespace:Tests;assembly=Tests" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+﻿<MyWindow Title="MyWindow" Width="525" Height="350" xmlns="clr-namespace:Tests;assembly=Tests" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
   <av:DockPanel Name="MyPanel">
     <av:Menu Height="26" av:DockPanel.Dock="Top">
       <av:MenuItem Header="File">
