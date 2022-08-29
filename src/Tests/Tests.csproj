@@ -1,6 +1,6 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras">
   <PropertyGroup>
-    <TargetFrameworks>net48;net5-Windows</TargetFrameworks>
+    <TargetFramework>net6-Windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
@@ -9,6 +9,7 @@
     <PackageReference Include="Argon" Version="0.1.0-beta.18" />
     <PackageReference Include="MarkdownSnippets.MsBuild" Version="24.5.0" PrivateAssets="all" />
     <PackageReference Include="Shipwreck.Phash.Bitmaps" Version="0.5.0" />
+    <PackageReference Include="Verify.DiffPlex" Version="2.0.0-beta.2" />
     <PackageReference Include="Verify.Phash" Version="3.0.0-beta.2" />
     <PackageReference Include="NUnit" Version="3.13.3" />
     <PackageReference Include="Verify.NUnit" Version="18.0.0-beta.8" />
