@@ -37,14 +37,4 @@ public class TheTests
 
     #endregion
 
-    static TheTests()
-    {
-        #region Enable
-
-        VerifyXaml.Enable();
-
-        #endregion
-
-        VerifyPhash.Initialize();
-    }
 }
