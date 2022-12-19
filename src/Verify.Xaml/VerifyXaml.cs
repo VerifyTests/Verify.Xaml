@@ -6,6 +6,7 @@ public static class VerifyXaml
 {
     public static void Enable()
     {
+        InnerVerifier.ThrowIfVerifyHasBeenRun();
         VerifierSettings.RegisterFileConverter<Window>(WindowToImage);
         VerifierSettings.RegisterFileConverter<FrameworkElement>(ElementToImage);
     }
