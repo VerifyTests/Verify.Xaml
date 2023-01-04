@@ -68,9 +68,9 @@ static class WpfUtils
             renderTargetBitmap.Render((Visual) window.Content);
 
             // Encoding the RenderBitmapTarget as a PNG file.
-            PngBitmapEncoder png = new();
+            var png = new PngBitmapEncoder();
             png.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
-            MemoryStream stream = new();
+            var stream = new MemoryStream();
             png.Save(stream);
             return stream;
         }
