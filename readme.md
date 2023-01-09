@@ -18,11 +18,10 @@ https://nuget.org/packages/Verify.Xaml/
 <a id='snippet-enable'></a>
 ```cs
 [ModuleInitializer]
-public static void Init()
-{
+public static void Init() =>
     VerifyXaml.Enable();
 ```
-<sup><a href='/src/Tests/ModuleInit.cs#L3-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/ModuleInit.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 A visual element (Window/Page/Control etc) can then be verified as follows:

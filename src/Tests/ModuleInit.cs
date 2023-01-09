@@ -3,12 +3,14 @@
     #region Enable
 
     [ModuleInitializer]
-    public static void Init()
-    {
+    public static void Init() =>
         VerifyXaml.Enable();
 
-        #endregion
+    #endregion
 
+    [ModuleInitializer]
+    public static void InitOther()
+    {
         VerifyDiffPlex.Initialize();
         VerifyPhash.Initialize();
     }
