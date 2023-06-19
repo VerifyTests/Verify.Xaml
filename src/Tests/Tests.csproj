@@ -14,7 +14,7 @@
     <PackageReference Include="Verify.NUnit" Version="20.3.2" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.2" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.90" PrivateAssets="all" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.91" PrivateAssets="all" />
     <ProjectReference Include="..\Verify.Xaml\Verify.Xaml.csproj" />
   </ItemGroup>
 </Project>
