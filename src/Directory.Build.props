@@ -5,6 +5,7 @@
     <NoWarn>CS1591;CS0649;CS8632;CA1416</NoWarn>
     <Version>4.1.0</Version>
     <AssemblyVersion>1.0.0</AssemblyVersion>
+    <LangVersion>preview</LangVersion>
     <PackageTags>Xaml, Wpf, Verify</PackageTags>
     <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow verification of Xaml and Wpf bits.</Description>
   </PropertyGroup>
