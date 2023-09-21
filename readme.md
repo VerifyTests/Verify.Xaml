@@ -6,6 +6,8 @@
 
 Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of Xaml UIs.
 
+**See [Milestones](../../milestones?state=closed) for release notes.**
+
 
 
 ## NuGet package
