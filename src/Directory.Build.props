@@ -8,5 +8,6 @@
     <LangVersion>preview</LangVersion>
     <PackageTags>Xaml, Wpf, Verify</PackageTags>
     <Description>Extends Verify (https://github.com/VerifyTests/Verify) to allow verification of Xaml and Wpf bits.</Description>
+    <ResolveAssemblyReferencesSilent>true</ResolveAssemblyReferencesSilent>
   </PropertyGroup>
 </Project>
