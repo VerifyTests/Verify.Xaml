@@ -9,7 +9,6 @@ Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of
 **See [Milestones](../../milestones?state=closed) for release notes.**
 
 
-
 ## NuGet package
 
 https://nuget.org/packages/Verify.Xaml/
@@ -129,7 +128,6 @@ The rendering of XAML elements can very slightly between different OS versions. 
 
  * [Forcing elements to use a specific theme](https://arbel.net/2006/11/03/forcing-wpf-to-use-a-specific-windows-theme/)
  * Using a [custom comparer](https://github.com/VerifyTests/Verify/blob/master/docs/comparer.md)
-
 
 
 ## Icon
