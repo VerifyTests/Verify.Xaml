@@ -17,19 +17,19 @@ https://nuget.org/packages/Verify.Xaml/
 ## Usage
 
 <!-- snippet: Enable -->
-<a id='snippet-enable'></a>
+<a id='snippet-Enable'></a>
 ```cs
 [ModuleInitializer]
 public static void Init() =>
     VerifyXaml.Initialize();
 ```
-<sup><a href='/src/Tests/ModuleInit.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/ModuleInit.cs#L3-L9' title='Snippet source file'>snippet source</a> | <a href='#snippet-Enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 A visual element (Window/Page/Control etc) can then be verified as follows:
 
 <!-- snippet: Window -->
-<a id='snippet-window'></a>
+<a id='snippet-Window'></a>
 ```cs
 [Test]
 public async Task WindowUsage()
@@ -38,7 +38,7 @@ public async Task WindowUsage()
     await Verify(window);
 }
 ```
-<sup><a href='/src/Tests/TheTests.cs#L7-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-window' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/TheTests.cs#L7-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-Window' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 With the state of the element being rendered as a verified files:
