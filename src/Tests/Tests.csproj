@@ -6,7 +6,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Argon" Version="0.17.0" />
-    <PackageReference Include="MarkdownSnippets.MsBuild" Version="26.0.1" PrivateAssets="all" />
+    <PackageReference Include="MarkdownSnippets.MsBuild" Version="27.0.0" PrivateAssets="all" />
     <PackageReference Include="Shipwreck.Phash.Bitmaps" Version="0.5.0" />
     <!-- direct ref to avoid CVE -->
     <PackageReference Include="System.Drawing.Common" Version="8.0.3" />
