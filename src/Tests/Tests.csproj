@@ -7,8 +7,6 @@
   <ItemGroup>
     <PackageReference Include="MarkdownSnippets.MsBuild" PrivateAssets="all" />
     <PackageReference Include="Shipwreck.Phash.Bitmaps" />
-    <!-- direct ref to avoid CVE -->
-    <PackageReference Include="System.Drawing.Common" />
     <PackageReference Include="Verify.DiffPlex" />
     <PackageReference Include="Verify.Phash" />
     <PackageReference Include="NUnit" />
