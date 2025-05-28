@@ -81,6 +81,7 @@ static class WpfUtils
             window.Close();
         }
     }
+
     static void Purge(XDocument document)
     {
         var root = document.Root!;
