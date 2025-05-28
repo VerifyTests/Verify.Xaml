@@ -1,5 +1,7 @@
 ﻿using System.Windows;
 
+using VerifyTests.Xaml;
+
 namespace VerifyTests;
 
 public static class VerifyXaml

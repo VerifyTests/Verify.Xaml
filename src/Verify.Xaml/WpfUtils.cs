@@ -1,39 +1,41 @@
-﻿using System.Windows;
+using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Xml;
 using System.Xml.Linq;
-using VerifyTests.Xaml;
+
+namespace VerifyTests.Xaml;
 
 static class WpfUtils
 {
+    private static readonly XmlWriterSettings writerSettings =
+        new()
+        {
+            Indent = true,
+            OmitXmlDeclaration = true,
+            NewLineChars = "\n",
+            IndentChars = "  ",
+            NewLineOnAttributes = true,
+        };
+
     public static string ToXamlString(this FrameworkElement element)
     {
-        var builder = new StringBuilder();
-        using var stringWriter = new StringWriter(builder);
-        using var xmlWriter = new XmlTextWriter(stringWriter)
+        var document = new XDocument();
+        using (var writerToDoc = document.CreateWriter())
         {
-            Formatting = Formatting.Indented
-        };
-        XamlWriter.Save(element, xmlWriter);
-        var document = XDocument.Load(new StringReader(builder.ToString()));
-        var root = document.Root!;
-        foreach (var attribute in root.Attributes().ToList())
-        {
-            var name = attribute.Name.ToString();
-            if (name is
-                "AllowsTransparency" or
-                "ShowInTaskbar" or
-                "WindowStyle" or
-                "Opacity" or
-                "Visibility")
-            {
-                attribute.Remove();
-            }
+            XamlWriter.Save(element, writerToDoc);
         }
 
-        return document.ToString();
+        Purge(document);
+
+        var builder = new StringBuilder();
+        using (var writerToString = XmlWriter.Create(builder, writerSettings))
+        {
+            document.WriteTo(writerToString);
+        }
+
+        return builder.ToString();
     }
 
     public static Stream ScreenCapture(FrameworkElement element)
@@ -77,6 +79,23 @@ static class WpfUtils
         finally
         {
             window.Close();
+        }
+    }
+    static void Purge(XDocument document)
+    {
+        var root = document.Root!;
+        foreach (var attribute in root.Attributes().ToList())
+        {
+            var name = attribute.Name.ToString();
+            if (name is
+                "AllowsTransparency" or
+                "ShowInTaskbar" or
+                "WindowStyle" or
+                "Opacity" or
+                "Visibility")
+            {
+                attribute.Remove();
+            }
         }
     }
 }
