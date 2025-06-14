@@ -3,7 +3,7 @@
   <PropertyGroup>
     <LangVersion>preview</LangVersion>
     <NoWarn>CS1591;CS0649;CS8632;CA1416;NU1608;NU1109</NoWarn>
-    <Version>4.1.0</Version>
+    <Version>4.1.1</Version>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <LangVersion>preview</LangVersion>
     <PackageTags>Xaml, Wpf, Verify</PackageTags>

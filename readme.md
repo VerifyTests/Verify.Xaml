@@ -4,7 +4,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/o2iy3b7k9le0ntps?svg=true)](https://ci.appveyor.com/project/SimonCropp/verify-xaml)
 [![NuGet Status](https://img.shields.io/nuget/v/Verify.Xaml.svg)](https://www.nuget.org/packages/Verify.Xaml/)
 
-Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of Xaml UIs.
+Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of Xaml UIs.<!-- singleLineInclude: intro. path: /docs/intro.include.md -->
 
 **See [Milestones](../../milestones?state=closed) for release notes.**
 
