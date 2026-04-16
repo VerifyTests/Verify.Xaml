@@ -1,0 +1,15 @@
+﻿<DataTemplateWindow
+  Title="DataTemplateWindow"
+  Width="300"
+  Height="200"
+  xmlns="clr-namespace:Tests;assembly=Tests"
+  xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+  <av:TabControl>
+    <av:TabItem
+      IsSelected="True"
+      Header="Tab1">
+      <av:TextBlock
+        Text="Content" />
+    </av:TabItem>
+  </av:TabControl>
+</DataTemplateWindow>

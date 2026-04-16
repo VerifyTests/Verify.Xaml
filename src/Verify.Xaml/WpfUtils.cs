@@ -19,23 +19,33 @@ static class WpfUtils
             NewLineOnAttributes = true,
         };
 
-    public static string ToXamlString(this FrameworkElement element)
+    public static string? ToXamlString(this FrameworkElement element)
     {
-        var document = new XDocument();
-        using (var writerToDoc = document.CreateWriter())
+        try
         {
-            XamlWriter.Save(element, writerToDoc);
+            var document = new XDocument();
+            using (var writerToDoc = document.CreateWriter())
+            {
+                XamlWriter.Save(element, writerToDoc);
+            }
+
+            Purge(document);
+
+            var builder = new StringBuilder();
+            using (var writerToString = XmlWriter.Create(builder, writerSettings))
+            {
+                document.WriteTo(writerToString);
+            }
+
+            return builder.ToString();
         }
-
-        Purge(document);
-
-        var builder = new StringBuilder();
-        using (var writerToString = XmlWriter.Create(builder, writerSettings))
+        catch (InvalidOperationException)
         {
-            document.WriteTo(writerToString);
+            // XamlWriter.Save cannot serialize non-public types that may appear
+            // in the visual tree (e.g. System.Windows.Baml2006.KeyRecord).
+            // Return null so callers can still produce the PNG snapshot.
+            return null;
         }
-
-        return builder.ToString();
     }
 
     public static Stream ScreenCapture(FrameworkElement element)

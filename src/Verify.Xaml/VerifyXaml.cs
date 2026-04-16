@@ -1,4 +1,4 @@
-﻿using System.Windows;
+using System.Windows;
 
 using VerifyTests.Xaml;
 
@@ -25,21 +25,26 @@ public static class VerifyXaml
     static ConversionResult ElementToImage(FrameworkElement element, IReadOnlyDictionary<string, object> context)
     {
         var pngStream = WpfUtils.ScreenCapture(element);
-        return new(
-            null,
-            [
-                new("xml", element.ToXamlString()),
-                new("png", pngStream)
-            ]);
+        var xaml = element.ToXamlString();
+        var targets = new List<Target> { new("png", pngStream) };
+        if (xaml != null)
+        {
+            targets.Insert(0, new("xml", xaml));
+        }
+
+        return new(null, targets);
     }
 
     static ConversionResult WindowToImage(Window window, IReadOnlyDictionary<string, object> context)
     {
         var pngStream = WpfUtils.ScreenCapture(window);
-        return new(null,
-            [
-                new("xml", window.ToXamlString()),
-                new("png", pngStream)
-            ]);
+        var xaml = window.ToXamlString();
+        var targets = new List<Target> { new("png", pngStream) };
+        if (xaml != null)
+        {
+            targets.Insert(0, new("xml", xaml));
+        }
+
+        return new(null, targets);
     }
 }

@@ -37,4 +37,10 @@ public class TheTests
 
     #endregion
 
+    [Test]
+    public async Task DataTemplateWindow()
+    {
+        var window = new DataTemplateWindow();
+        await Verify(window);
+    }
 }
