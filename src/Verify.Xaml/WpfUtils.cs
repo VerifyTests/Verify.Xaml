@@ -111,7 +111,9 @@ static class WpfUtils
                 "ShowInTaskbar" or
                 "WindowStyle" or
                 "Opacity" or
-                "Visibility")
+                "Visibility" or
+                // Emitted by the WPF XamlWriter on net10+; defaults to "None" (theming off).
+                "ThemeMode")
             {
                 attribute.Remove();
             }
