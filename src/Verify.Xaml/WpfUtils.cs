@@ -59,6 +59,13 @@ static class WpfUtils
 
     public static Stream ScreenCapture(Window window)
     {
+        // Showing a WPF window installs a DispatcherSynchronizationContext as
+        // SynchronizationContext.Current on the current thread. Verify runs its pipeline free of any
+        // SynchronizationContext (it does async IO without ConfigureAwait(false); see
+        // SettingsTask.ToTask), so restore the previous context afterwards. Otherwise the leaked
+        // context would be captured by Verify's downstream async IO and its continuation posted to a
+        // message pump that is never run - deadlocking whenever a snapshot is new or mismatched.
+        var syncContext = SynchronizationContext.Current;
         try
         {
             var height = window.Height;
@@ -89,6 +96,7 @@ static class WpfUtils
         finally
         {
             window.Close();
+            SynchronizationContext.SetSynchronizationContext(syncContext);
         }
     }
 
