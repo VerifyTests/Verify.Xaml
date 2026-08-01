@@ -9,6 +9,20 @@ Extends [Verify](https://github.com/VerifyTests/Verify) to allow verification of
 **See [Milestones](../../milestones?state=closed) for release notes.**
 
 
+## Sponsors
+
+
+### Entity Framework Extensions<!-- include: sponsors. path: /docs/sponsors.include.md -->
+
+[Entity Framework Extensions](https://entityframework-extensions.net/?utm_source=simoncropp&utm_medium=Verify.Xaml) is a major sponsor and is proud to contribute to the development this project.
+
+[![Entity Framework Extensions](https://raw.githubusercontent.com/VerifyTests/Verify.Xaml/refs/heads/main/docs/zzz.png)](https://entityframework-extensions.net/?utm_source=simoncropp&utm_medium=Verify.Xaml)
+
+### Developed using JetBrains IDEs
+
+[![JetBrains logo.](https://raw.githubusercontent.com/VerifyTests/Verify.Xaml/main/docs/jetbrains.png)](https://jb.gg/OpenSourceSupport)<!-- endInclude -->
+
+
 ## NuGet
 
  * https://nuget.org/packages/Verify.Xaml
