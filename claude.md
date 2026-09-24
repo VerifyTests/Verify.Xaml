@@ -31,7 +31,7 @@ Because the converter mutates a real WPF window during rendering, tests must run
 - `src/Verify.Xaml/Verify.Xaml.csproj` uses `Microsoft.NET.Sdk` and multi-targets `net48;net10.0-windows` with `UseWPF=true`.
 - `src/Directory.Build.props` sets `TreatWarningsAsErrors=true` and `EnforceCodeStyleInBuild=true` — code-style violations break the build. The package version (`<Version>`) is bumped here.
 - Central package versions live in `src/Directory.Packages.props` (`ManagePackageVersionsCentrally`); add new dependencies there, not in individual csprojs.
-- CI is AppVeyor (`src/appveyor.yml`); on test failure it uploads any `*.received.*` files as artifacts — a hint when triaging CI-only XAML/PNG diffs.
+- CI is GitHub Actions (`.github/workflows/build.yml`); on test failure it uploads any `*.received.*` files as artifacts — a hint when triaging CI-only XAML/PNG diffs.
 
 ## Docs / readme
 
