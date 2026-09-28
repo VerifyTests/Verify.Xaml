@@ -2,6 +2,8 @@
   <PropertyGroup>
     <TargetFramework>net10.0-windows</TargetFramework>
     <OutputType>Exe</OutputType>
+    <!-- WPF markup compilation builds a temporary _wpftmp project that lacks the TUnit generated entry point -->
+    <OutputType Condition="'$(_TargetAssemblyProjectName)' != ''">Library</OutputType>
     <UseWPF>true</UseWPF>
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
