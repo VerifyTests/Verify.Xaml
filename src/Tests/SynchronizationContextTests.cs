@@ -3,8 +3,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-[Apartment(ApartmentState.STA)]
-[TestFixture]
+[STAThreadExecutor]
 public class SynchronizationContextTests
 {
     [Test]
@@ -45,7 +44,7 @@ public class SynchronizationContextTests
 
         var completed = await Task.WhenAny(task, Task.Delay(TimeSpan.FromSeconds(10)));
 
-        Assert.That(completed, Is.SameAs(task), "WPF Verify deadlocked under a SynchronizationContext with no message pump.");
+        await Assert.That(completed).IsSameReferenceAs(task).Because("WPF Verify deadlocked under a SynchronizationContext with no message pump.");
 
         // The new snapshot should fault (VerifyException); its type is internal to Verify, so just observe the fault.
         Exception? exception = null;
@@ -58,7 +57,7 @@ public class SynchronizationContextTests
             exception = e;
         }
 
-        Assert.That(exception, Is.Not.Null, "Expected the new snapshot to throw.");
+        await Assert.That(exception).IsNotNull().Because("Expected the new snapshot to throw.");
     }
 
     class PumplessSynchronizationContext : SynchronizationContext

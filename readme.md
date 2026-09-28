@@ -52,7 +52,7 @@ public async Task WindowUsage()
     await Verify(window);
 }
 ```
-<sup><a href='/src/Tests/TheTests.cs#L7-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-Window' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/TheTests.cs#L6-L15' title='Snippet source file'>snippet source</a> | <a href='#snippet-Window' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 With the state of the element being rendered as a verified files:

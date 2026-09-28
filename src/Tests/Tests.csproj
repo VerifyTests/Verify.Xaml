@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net10.0-windows</TargetFramework>
+    <OutputType>Exe</OutputType>
     <UseWPF>true</UseWPF>
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
@@ -9,16 +10,18 @@
     <PackageReference Include="Shipwreck.Phash.Bitmaps" />
     <PackageReference Include="Verify.DiffPlex" />
     <PackageReference Include="Verify.Phash" />
-    <PackageReference Include="NUnit" />
-    <PackageReference Include="Verify.NUnit" />
+    <PackageReference Include="TUnit" />
+    <PackageReference Include="Verify.TUnit" />
     <PackageReference Include="Argon" />
     <PackageReference Include="DiffEngine" />
     <PackageReference Include="EmptyFiles" />
     <PackageReference Include="SimpleInfoName" />
     <PackageReference Include="Verify" />
-    <PackageReference Include="NUnit3TestAdapter" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="ProjectDefaults" PrivateAssets="all" />
+    <Using Include="TUnit.Core" />
+    <Using Include="TUnit.Core.Executors" />
+    <Using Include="TUnit.Assertions" />
+    <Using Include="TUnit.Assertions.Extensions" />
     <ProjectReference Include="..\Verify.Xaml\Verify.Xaml.csproj" />
   </ItemGroup>
 </Project>

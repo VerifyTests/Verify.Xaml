@@ -1,7 +1,6 @@
 ﻿using Tests;
 
-[Apartment(ApartmentState.STA)]
-[TestFixture]
+[STAThreadExecutor]
 public class TheTests
 {
     #region Window
