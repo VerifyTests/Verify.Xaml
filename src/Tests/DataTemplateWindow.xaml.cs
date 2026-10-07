@@ -1,8 +1,6 @@
-using System.Windows;
-
 namespace Tests;
 
-public partial class DataTemplateWindow : Window
+public partial class DataTemplateWindow
 {
     public DataTemplateWindow() =>
         InitializeComponent();

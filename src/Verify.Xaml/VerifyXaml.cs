@@ -26,7 +26,10 @@ public static class VerifyXaml
     {
         var pngStream = WpfUtils.ScreenCapture(element);
         var xaml = element.ToXamlString();
-        var targets = new List<Target> { new("png", pngStream) };
+        var targets = new List<Target>
+        {
+            new("png", pngStream)
+        };
         if (xaml != null)
         {
             targets.Insert(0, new("xml", xaml));
