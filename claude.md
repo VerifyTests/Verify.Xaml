@@ -22,7 +22,7 @@ The library is intentionally tiny — three files do the work:
 
 - `src/Verify.Xaml/VerifyXaml.cs` — single public entry point. `VerifyXaml.Initialize()` (called from a `[ModuleInitializer]`) registers two Verify `FileConverter`s: one for `Window`, one for `FrameworkElement`. Each converter returns a `ConversionResult` with two targets: `xml` + `png`.
 - `src/Verify.Xaml/WpfUtils.cs` — `ToXamlString` serializes the visual tree with `XamlWriter.Save` into an `XDocument`, then re-emits it via `XmlWriter` with `NewLineOnAttributes = true` for stable diffs. `Purge` strips attributes the screen-capture path mutates (`AllowsTransparency`, `ShowInTaskbar`, `WindowStyle`, `Opacity`, `Visibility`) so the captured XAML matches the original element. `ScreenCapture` shows the window invisibly (Opacity 0, transparent, no taskbar) to force layout, then renders to a PNG.
-- `src/Verify.Xaml/HostWindow.xaml(.cs)` — host used to render bare `FrameworkElement`s (non-Window content) for screen capture.
+- `src/Verify.Xaml/HostWindow.cs` — host used to render bare `FrameworkElement`s (non-Window content) for screen capture. Deliberately code-only (no XAML): `Application.LoadComponent` is not thread-safe for a shared resource, and this window is constructed concurrently when tests run in parallel on separate STA threads.
 
 Because the converter mutates a real WPF window during rendering, tests must run on an STA thread — `src/Tests/TheTests.cs` is annotated `[Apartment(ApartmentState.STA)]`.
 
