@@ -14,7 +14,7 @@ All commands run from the `src/` directory. Build/test target Windows only (WPF)
 - Test (full): `dotnet test src --configuration Release --no-build --no-restore`
 - Test single: `dotnet test src/Tests/Tests.csproj --filter "FullyQualifiedName~TheTests.WindowUsage"`
 
-The required .NET SDK is pinned in `src/global.json` (currently 10.0.202, prerelease allowed, `latestFeature` rollForward).
+The required .NET SDK is pinned in `src/global.json`.
 
 ## Architecture
 
