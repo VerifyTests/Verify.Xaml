@@ -1,5 +1,6 @@
 using System.IO;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Markup;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -51,6 +52,13 @@ static class WpfUtils
 
     public static Stream ScreenCapture(FrameworkElement element)
     {
+        // ContextMenu and ToolTip throw when given a logical or visual parent, so they cannot be
+        // placed in a HostWindow. Lay them out and render them directly instead.
+        if (element is ContextMenu or ToolTip)
+        {
+            return RenderDetached(element);
+        }
+
         var window = new HostWindow
         {
             Content = element
@@ -86,19 +94,37 @@ static class WpfUtils
                 96,
                 PixelFormats.Pbgra32);
             renderTargetBitmap.Render((Visual) window.Content);
-
-            // Encoding the RenderBitmapTarget as a PNG file.
-            var png = new PngBitmapEncoder();
-            png.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
-            var stream = new MemoryStream();
-            png.Save(stream);
-            return stream;
+            return ToPng(renderTargetBitmap);
         }
         finally
         {
             window.Close();
             SynchronizationContext.SetSynchronizationContext(syncContext);
         }
+    }
+
+    static Stream RenderDetached(FrameworkElement element)
+    {
+        element.Measure(new(double.PositiveInfinity, double.PositiveInfinity));
+        element.Arrange(new(element.DesiredSize));
+        element.UpdateLayout();
+        var renderTargetBitmap = new RenderTargetBitmap(
+            (int) Math.Ceiling(element.ActualWidth),
+            (int) Math.Ceiling(element.ActualHeight),
+            96,
+            96,
+            PixelFormats.Pbgra32);
+        renderTargetBitmap.Render(element);
+        return ToPng(renderTargetBitmap);
+    }
+
+    static Stream ToPng(BitmapSource bitmap)
+    {
+        var png = new PngBitmapEncoder();
+        png.Frames.Add(BitmapFrame.Create(bitmap));
+        var stream = new MemoryStream();
+        png.Save(stream);
+        return stream;
     }
 
     static void Purge(XDocument document)
