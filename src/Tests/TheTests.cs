@@ -1,4 +1,5 @@
-﻿using Tests;
+﻿using System.Windows.Controls;
+using Tests;
 
 [STAThreadExecutor]
 public class TheTests
@@ -35,6 +36,22 @@ public class TheTests
     }
 
     #endregion
+
+    [Test]
+    public async Task ContextMenuUsage()
+    {
+        var menu = new ContextMenu();
+        menu.Items.Add(new MenuItem { Header = "Open" });
+        menu.Items.Add(new MenuItem { Header = "Exit" });
+        await Verify(menu);
+    }
+
+    [Test]
+    public async Task ToolTipUsage()
+    {
+        var toolTip = new ToolTip { Content = "The tip" };
+        await Verify(toolTip);
+    }
 
     [Test]
     public async Task DataTemplateWindow()
